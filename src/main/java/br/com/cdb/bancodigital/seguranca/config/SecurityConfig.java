@@ -1,5 +1,6 @@
 package br.com.cdb.bancodigital.seguranca.config;
 
+import br.com.cdb.bancodigital.seguranca.application.port.in.UsuarioUseCase;
 import br.com.cdb.bancodigital.seguranca.utils.ConstantUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

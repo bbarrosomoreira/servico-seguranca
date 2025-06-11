@@ -1,8 +1,11 @@
 package br.com.cdb.bancodigital.seguranca.adapter.output;
 
+import br.com.cdb.bancodigital.seguranca.application.core.domain.Role;
 import br.com.cdb.bancodigital.seguranca.application.core.domain.Usuario;
 import br.com.cdb.bancodigital.seguranca.application.core.domain.UsuarioMapper;
 import br.com.cdb.bancodigital.seguranca.application.port.out.UsuarioRepository;
+import br.com.cdb.bancodigital.seguranca.config.exception.ResourceNotFoundException;
+import br.com.cdb.bancodigital.seguranca.config.exception.SystemException;
 import br.com.cdb.bancodigital.seguranca.utils.ConstantUtils;
 import br.com.cdb.bancodigital.seguranca.utils.SqlQueries;
 import lombok.RequiredArgsConstructor;
@@ -53,7 +56,7 @@ public class UsuarioDAO implements UsuarioRepository {
             log.info(ConstantUtils.USUARIO_ENCONTRADO);
             return Boolean.TRUE.equals(existe);
         } catch (EmptyResultDataAccessException e) {
-            log.warn("{} - {}", ConstantUtils.ERRO_BUSCA_USUARIO, ConstantUtils.RETORNO_VAZIO);
+            log.warn(ConstantUtils.ERRO_BUSCA_USUARIO, ConstantUtils.RETORNO_VAZIO);
             return false;
         }
     }

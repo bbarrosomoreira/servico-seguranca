@@ -2,6 +2,10 @@ package br.com.cdb.bancodigital.seguranca.utils;
 
 public class SqlQueries {
 
+    private SqlQueries() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static final String SQL_CREATE_USUARIO = "SELECT * FROM public.add_usu_v1(?, ?, ?)";
     public static final String SQL_EXIST_USUARIO_BY_EMAIL = "SELECT public.ext_usu_ema_v1(?)";
     public static final String SQL_READ_USUARIO_BY_EMAIL = "SELECT * FROM public.lst_usu_ema_v1(?)";

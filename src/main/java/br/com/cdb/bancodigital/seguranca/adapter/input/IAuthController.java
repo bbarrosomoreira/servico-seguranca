@@ -1,5 +1,8 @@
 package br.com.cdb.bancodigital.seguranca.adapter.input;
 
+import br.com.cdb.bancodigital.seguranca.application.core.domain.LoginDTO;
+import br.com.cdb.bancodigital.seguranca.application.core.domain.LoginResponse;
+import br.com.cdb.bancodigital.seguranca.application.core.domain.UsuarioDTO;
 import br.com.cdb.bancodigital.seguranca.utils.ConstantUtils;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
